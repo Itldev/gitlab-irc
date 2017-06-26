@@ -81,6 +81,10 @@ post '/' do
       say "[#{json['repository']['name']}] #{json['user_name']} | New Merge Request: #{json['object_attributes']['title']}"
       say "           View Request: #{json['object_attributes']['url']}"
     end
+  when 'pipeline'
+      say "[#{json['project']['name']}] #{json['user']['name']} | New Pipeline: #{json['status']}"
+      say "           View Request: #{json['project']['web_url']}/pipelines"
 
+    end
     status 200
 end
