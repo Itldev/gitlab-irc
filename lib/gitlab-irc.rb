@@ -84,7 +84,6 @@ post '/' do
   when 'pipeline'
       say "[#{json['project']['name']}] #{json['user']['name']} | New Pipeline: #{json['status']}"
       say "           View Request: #{json['project']['web_url']}/pipelines"
-
     end
     status 200
 end
